@@ -387,10 +387,10 @@ class WeaviateIndexer:
         end = time.perf_counter() - start
     
         print(f'Batch job completed in {round(end/60, 2)} minutes.')
-        class_info = self._client.show_class_info()
-        for i, c in enumerate(class_info):
-            if c['class'] == class_name:
-                print(class_info[i])
+        # class_info = self._client.show_class_info()
+        # for i, c in enumerate(class_info):
+        #     if c['class'] == class_name:
+        #         print(class_info[i])
         self._client.batch.shutdown()
 
 @dataclass
